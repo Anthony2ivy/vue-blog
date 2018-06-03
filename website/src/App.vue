@@ -1,23 +1,45 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <header class="my-header" :class="{'my-back-transparent': isTop}">
+      <ul class="my-nav-list pull-right">
+        <li class="my-nav-item" v-for="item in navItems" :class="{active : item.isActive}" @click="">{{item.name}}</li>
+      </ul>
+    </header>
+    <div id="main-container">
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
+  export default {
+    name: 'App',
+    data: function () {
+      return {
+        navItems: [
+          {name: '首页', isActive: true},
+          {name: '博客', isActive: false},
+          {name: '教程', isActive: false},
+          {name: '联系我', isActive: false}],
+        isTop: true
+      }
+    },
+    methods: {},
+    mounted: function () {
+      var self=this;
+      window.onscroll = function () {
+        if (window.document.documentElement.scrollTop > 0) {
+          if (self.isTop)
+            self.isTop = false;
+        } else {
+          if (!self.isTop)
+            self.isTop = true;
+        }
+      }
+    }
+  }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
