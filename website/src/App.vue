@@ -20,7 +20,7 @@
           {name: '首页', isActive: true},
           {name: '博客', isActive: false},
           {name: '教程', isActive: false},
-          {name: '联系我t', isActive: false}],
+          {name: '联系我', isActive: false}],
         isTop: true
       }
     },
