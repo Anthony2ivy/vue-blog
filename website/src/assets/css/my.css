@@ -7,8 +7,9 @@ body{
   position: fixed;
   z-index: 9999;
   padding-right: 15%;
-  background-color: rgba(255,255,255,0.6);
-  transition: background 0.5s;
+  background-color: rgba(255,255,255,0.9);
+  border-bottom: 1px solid #e7e7e7;
+  transition: all 0.5s;
 }
 .my-nav-list{
   height: 40px;
@@ -45,13 +46,75 @@ body{
   background-color: rgba(255,255,255,0);
   background-size: cover;
   background-position: center;
+  border-bottom-color: rgba(255,255,255,0);
 }
 
 .my-center-title{
   color:black;
   text-align: center;
   width: 100%;
-  margin-top: -250px;
+  margin-top: -300px;
   font-size: 35px;
   font-family: 'Helvetica Neue';
+}
+
+.my-double-circle-icon{
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  box-shadow:  0px 0px 0px 7px #ececec, 0px 0px 9px 9px rgba(0, 0, 0, 0.3);;
+}
+
+.my-center-second-title{
+  text-align: center;
+  font-family: "PingFang SC";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  padding-left: 30px;
+  font-size: 15px;
+  color: rgba(0,0,0,0.7);
+}
+.my-tag-group{
+  text-align: left;
+}
+.my-tag-group .at-tag{
+  margin-right: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.my-tag-group .at-tag .at-tag__text{
+  font-size: 15px;
+  color: white;
+}
+hr.lite{
+  border-color: rgba(0, 0, 0, 0.16);
+  border-width: 1px;
+  border-top: none;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.28);
+}
+.my-col-container{
+  padding: 0 20px;
+}
+
+.my-img-rectangle{
+  border-radius: 3px;
+  max-width: 300px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 0px 3px #ececec, 0px 0px 6px 3px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 200px;
+}
+.my-p{
+  font-family: "PingFang SC";
+  color: rgba(0,0,0,0.3);
+  font-size: 18px;
+}
+
+.my-intro-title{
+  font-family: "PingFang SC";
+  color: rgba(0,0,0,0.5);
 }
