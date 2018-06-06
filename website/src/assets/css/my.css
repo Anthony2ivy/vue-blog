@@ -91,10 +91,9 @@ body{
   color: white;
 }
 hr.lite{
-  border-color: rgba(0, 0, 0, 0.16);
-  border-width: 1px;
-  border-top: none;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.28);
+  margin: 1.2em 0;
+  border: 0;
+  border-bottom: 1px solid #C5D9E8;
 }
 .my-col-container{
   padding: 0 20px;
@@ -110,11 +109,34 @@ hr.lite{
 }
 .my-p{
   font-family: "PingFang SC";
-  color: rgba(0,0,0,0.3);
+  color: #8DABC4ff;
   font-size: 18px;
 }
 
 .my-intro-title{
   font-family: "PingFang SC";
   color: rgba(0,0,0,0.5);
+}
+
+.my-blog-item{
+  text-align: left;
+  font-family: ”PingFang SC“;
+}
+
+.my-blog-item .my-blog-title{
+  font-size:24px;
+  font-weight: 500;
+}
+
+.my-blog-item .my-blog-intro{
+  font-style: italic;
+  opacity: 0.5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.my-blog-item .my-blog-footer{
+
 }
