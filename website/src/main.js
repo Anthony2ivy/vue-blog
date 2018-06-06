@@ -8,6 +8,7 @@ import 'at-ui-style'
 import common from '@/assets/css/common.css'
 import my from '@/assets/css/my.css'
 import VueParticles from 'vue-particles'
+import 'babel-polyfill'
 
 Vue.config.productionTip = false;
 Vue.use(AtComponents);
