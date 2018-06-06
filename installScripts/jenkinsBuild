@@ -7,6 +7,6 @@ BUILD_NAME=`cat ./package.json | grep '"name"' | awk {'print $2'} | awk -F'"' {'
 cd $WORKSPACE
 docker build -t ${BUILD_NAME}:${BUILD_VERSION} .
 if [ $(docker ps | grep -c ${BUILD_NAME}) -gt 0 ] ; then docker kill ${BUILD_NAME};fi
-if [ $(docker ps | grep -c ${BUILD_NAME}) -gt 0 ] ; then docker rm ${BUILD_NAME};fi
+if [ $(docker ps -a | grep -c ${BUILD_NAME}) -gt 0 ] ; then docker rm ${BUILD_NAME};fi
 docker run -d -p 8888:80 --name=${BUILD_NAME} ${BUILD_NAME}:${BUILD_VERSION}
 docker save ${BUILD_NAME}:${BUILD_VERSION} | gzip > ${BUILD_NAME}-${BUILD_VERSION}.tar.gz
