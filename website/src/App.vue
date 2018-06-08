@@ -28,7 +28,8 @@
     mounted: function () {
       var self=this;
       window.onscroll = function () {
-        if (window.document.documentElement.scrollTop > 0) {
+        const scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
+        if (scrollTop > 0) {
           if (self.isTop)
             self.isTop = false;
         } else {

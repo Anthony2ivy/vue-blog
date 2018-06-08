@@ -129,6 +129,7 @@ hr.lite{
 .my-blog-item .my-blog-title{
   font-size:24px;
   font-weight: 500;
+  color: #2C405A;
 }
 
 .my-blog-item .my-blog-intro{
@@ -137,6 +138,7 @@ hr.lite{
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  color: #3F536E;
   overflow: hidden;
 }
 
@@ -151,7 +153,13 @@ hr.lite{
 .my-blog-item:hover .my-blog-title{
   color: #6190E8;
 }
+.my-blog-item:active .my-blog-title{
+  color: #6190E8;
+}
 
 .my-blog-item:hover .my-blog-intro{
+  color: #6190E8;
+}
+.my-blog-item:active .my-blog-intro{
   color: #6190E8;
 }
