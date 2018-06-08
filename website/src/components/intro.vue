@@ -24,11 +24,12 @@
           <p class="my-p">新技术会让我狂热</p>
         </div>
         <div class="col-md-18 my-col-container" style="padding-top: 40px">
-          <div class="my-blog-item">
+          <div class="my-blog-item" v-for="item in testItems">
             <div class="my-blog-title">下一代 Web 应用模型 —— Progressive Web App</div>
             <p class="my-blog-intro">近年来，Web 应用在整个软件与互联网行业承载的责任越来越重，软件复杂度和维护成本越来越高，Web 技术，尤其是 Web 客户端技术，迎来了爆发式的发展。
               包括但不限于基于 Node.js 的前端工程化方案；诸如 Webpack、Rollup 这样的打包工具；Babel、PostCSS 这样的转译工具；TypeScript、Elm 这样转译至 JavaScript 的编程语言；React、Angular、Vue 这样面向现代 web 应用需求的前端框架及其生态，也涌现出了像同构 JavaScript与通用 JavaScript 应用这样将服务器端渲染（Server-side Rendering）与单页面应用模型（Single-page App）结合的 web 应用架构方式，可以说是百花齐放。</p>
             <div class="my-blog-footer">Posted by Anthony on February 9, 2017</div>
+            <hr class="lite">
           </div>
         </div>
       </div>
@@ -46,7 +47,8 @@
         blogIntro:'—— 挣扎着在极客路上前进',
         introBackImgUrl:'static/imgs/back1.jpg',
         introIconImgUrl:'static/imgs/icon.jpg',
-        introTagList:['前端','Vue','微服务','docker','webpack','express','CI']
+        introTagList:['前端','Vue','微服务','docker','webpack','express','CI'],
+        testItems:[{},{},{},{}]
       }
     }
   }

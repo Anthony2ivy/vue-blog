@@ -121,6 +121,9 @@ hr.lite{
 .my-blog-item{
   text-align: left;
   font-family: ”PingFang SC“;
+  cursor: pointer;
+  padding: 0 0 1rem 0;
+  color: #3F536E;
 }
 
 .my-blog-item .my-blog-title{
@@ -138,5 +141,17 @@ hr.lite{
 }
 
 .my-blog-item .my-blog-footer{
+  margin-top: 7px;
+  font-family: Lora,'Times New Roman',serif;
+  color: #ccc;
+  font-size: 16px;
+  font-style: italic;
+}
 
+.my-blog-item:hover .my-blog-title{
+  color: #6190E8;
+}
+
+.my-blog-item:hover .my-blog-intro{
+  color: #6190E8;
 }
