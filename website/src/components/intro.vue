@@ -4,9 +4,9 @@
                    :particles-number="50" :click-effect="false" color="#d2d2d2">
     </vue-particles>
     <h1 class="my-center-title" >{{blogName}}</h1>
-    <h2 class="my-center-second-title" style="margin-top: 20px;margin-left: 70px">{{blogIntro}}</h2>
-    <div class="my-double-circle-icon" :style="{marginTop : '120px',backgroundImage : 'url('+introIconImgUrl+')'}"></div>
-    <div class="container">
+    <h2 class="my-center-second-title" style="margin-top: 20px;">{{blogIntro}}</h2>
+    <!--<div class="my-double-circle-icon" :style="{marginTop : '120px',backgroundImage : 'url('+introIconImgUrl+')'}"></div>-->
+    <div class="container" style="margin-top: 120px;">
       <div class="row at-row flex-center">
         <div class="col-md-6 my-col-container">
           <hr class="lite"/>

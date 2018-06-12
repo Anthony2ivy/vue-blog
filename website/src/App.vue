@@ -2,7 +2,7 @@
   <div id="app">
     <header class="my-header" :class="{'my-back-transparent': isTop}">
       <ul class="my-nav-list pull-right">
-        <li class="my-nav-item" v-for="item in navItems" :class="{active : item.isActive}" @click="">{{item.name}}</li>
+        <router-link :to="item.link" class="my-nav-item" v-for="item in navItems" >{{item.name}}</router-link>
       </ul>
     </header>
     <div id="main-container">
@@ -17,10 +17,10 @@
     data: function () {
       return {
         navItems: [
-          {name: '首页', isActive: true},
-          {name: '博客', isActive: false},
-          {name: '教程', isActive: false},
-          {name: '联系我', isActive: false}],
+          {name: '首页', isActive: true,link:'/intro'},
+          {name: '博客', isActive: false,link:'blogs'},
+          {name: '教程', isActive: false,link:'blogs'},
+          {name: '联系我', isActive: false,link:'blogs'}],
         isTop: true
       }
     },

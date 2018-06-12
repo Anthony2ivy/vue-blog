@@ -20,8 +20,10 @@ body{
   line-height: 40px;
   margin: 0 10px;
   padding: 0 5px;
-  color: black;
   cursor: pointer;
+  font-family :"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+  color: #1D1D1F;
+  font-size: 14px;
 }
 .my-nav-list .my-nav-item:after{
   content:"";
@@ -34,11 +36,12 @@ body{
   transition: all 0.3s;
 }
 
-.my-nav-list .my-nav-item:not(.active):hover:after{
+
+.my-nav-list .my-nav-item:not(.router-link-active):hover:after{
   transform: scaleX(1.2);
 }
 
-.my-nav-list .my-nav-item.active:after{
+.my-nav-list .my-nav-item.router-link-active:after{
   transform: scaleX(1.2);
 }
 
@@ -53,7 +56,7 @@ body{
   color:black;
   text-align: center;
   width: 100%;
-  margin-top: -300px;
+  margin-top: -200px;
   font-size: 35px;
   font-family: 'Helvetica Neue';
 }
@@ -77,6 +80,8 @@ body{
   padding-left: 30px;
   font-size: 15px;
   color: rgba(0,0,0,0.7);
+  text-align: left;
+  margin-left: 50%
 }
 .my-tag-group{
   text-align: left;
@@ -162,4 +167,79 @@ hr.lite{
 }
 .my-blog-item:active .my-blog-intro{
   color: #6190E8;
+}
+
+.my-timeline .my-timeline-item{
+  position: relative;
+  word-break: break-all;
+  padding: 1px;
+}
+.my-timeline .my-timeline-item .my-timeline-item__time{
+  position: absolute;
+  left: -10px;
+  height: 16px;
+  top:50%;
+  margin-top: -8px;
+  line-height: 16px;
+}
+.my-timeline .my-timeline-item .my-timeline-item__block{
+  margin-left: 30px;
+  box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 2px;
+  background-color: white;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.my-timeline .my-timeline-item:hover .my-timeline-item__block{
+  box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.2);
+  transform: translateX(15px);
+}
+.my-timeline .my-timeline-item:hover:after{
+  transform: scale(1.5);
+}
+.my-timeline .my-timeline-item:before{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 2px;
+  background-color: #dfdfdf;
+  left: -20px;
+}
+
+.my-timeline .my-timeline-item:not(:last-child):not(:first-child):before{
+  top: 0;
+  height: 100%;
+}
+.my-timeline .my-timeline-item:first-child:before{
+  height: 50%;
+  top: 50%;
+}
+.my-timeline .my-timeline-item:last-child:before{
+  height: 50%;
+  top:0;
+}
+.my-timeline .my-timeline-item:after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  top: 50%;
+  left:-20px;
+  margin-top: -5px;
+  border-radius: 5px;
+  margin-left: -4px;
+  border: 2px solid #78a4fa;
+  transition: all 0.3s;
+}
+
+.my-blog-container{
+  background-color: #f7f7f7;
+  min-height: 1000px;
+  box-shadow: 0px 1px 4px 2px rgba(0,0,0,0.2);
+  border-radius: 3px;
 }
