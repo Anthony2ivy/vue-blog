@@ -41,12 +41,11 @@
     mounted: () => {
       let els = document.getElementsByClassName('my-timeline-item');
       for (let el of els) {
-
         el.addEventListener("ontouchstart", () => {
-          el.classList.add('hover');
+          this.classList.add('hover');
         }, true);
         el.addEventListener("ontouchend", () => {
-          el.classList.remove('hover');
+          this.classList.remove('hover');
         }, true);
       }
     }
