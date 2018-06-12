@@ -50,6 +50,9 @@
         introTagList:['前端','Vue','微服务','docker','webpack','express','CI'],
         testItems:[{},{},{},{}]
       }
+    },
+    mounted: () => {
+
     }
   }
 </script>

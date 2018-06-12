@@ -29,8 +29,26 @@
         backImgUrl: 'static/imgs/blog-back.jpg',
         pageName: 'BLOGS',
         pageIntro: '—— 每天记录一点,总有一天会成为大牛',
-        testItems: [{time:'6-02',title: '下一代 Web 应用模型 —— Progressive Web App'}, {time:'6-02',title: 'asdasdasdasdddasdasdasasdasdasdasdsadasda'}, {time:'6-02',title: 'asdasdaasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdaasdasdasdasdasdaasdasdasdasdasdaasdasdasdasdasdaasdasdasdasdasdaasdasdasdasdasdaasdasdasdasdasdaasdasdasdasdasdaasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdsd'}],
+        testItems: [{time: '6-02', title: '下一代 Web 应用模型 —— Progressive Web App'}, {
+          time: '6-02',
+          title: 'asdasdasdasdddasdasdasasdasdasdasdsadasda'
+        }, {
+          time: '6-02',
+          title: 'asdasdaasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdaasdasdasdasdasdaasdasdasdasdasdaasdasdasdasdasdaasdasdasdasdasdaasdasdasdasdasdaasdasdasdasdasdaasdasdasdasdasdaasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdsd'
+        }],
       };
+    },
+    mounted: () => {
+      let els = document.getElementsByClassName('my-timeline-item');
+      for (let el of els) {
+
+        el.addEventListener("ontouchstart", () => {
+          el.classList.add('hover');
+        }, true);
+        el.addEventListener("ontouchend", () => {
+          el.classList.remove('hover');
+        }, true);
+      }
     }
   }
 </script>

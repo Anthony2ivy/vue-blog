@@ -198,7 +198,7 @@ hr.lite{
   box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.2);
   transform: translateX(15px);
 }
-.my-timeline .my-timeline-item:active .my-timeline-item__block{
+.my-timeline .my-timeline-item.hover .my-timeline-item__block{
   box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.2);
   transform: translateX(15px);
 }
@@ -206,7 +206,7 @@ hr.lite{
   font-size: 18px;
   transform: translateX(6px);
 }
-.my-timeline .my-timeline-item:active .my-timeline-item__time{
+.my-timeline .my-timeline-item.hover .my-timeline-item__time{
   font-size: 18px;
   transform: translateX(6px);
 }
@@ -214,7 +214,7 @@ hr.lite{
   transform: scale(1.5);
   box-shadow: 0 0 5px 2px #78a4fa61;
 }
-.my-timeline .my-timeline-item:active:after{
+.my-timeline .my-timeline-item.hover:after{
   transform: scale(1.5);
   box-shadow: 0 0 5px 2px #78a4fa61;
 }
