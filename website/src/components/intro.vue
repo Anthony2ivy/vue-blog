@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vue-particles class="full-back-img" :style="{backgroundImage : 'url('+introBackImgUrl+')'}"
+    <vue-particles class="my-fullback-img" :style="{backgroundImage : 'url('+introBackImgUrl+')'}"
                    :particles-number="50" :click-effect="false" color="#d2d2d2">
     </vue-particles>
     <h1 class="my-center-title" >{{blogName}}</h1>
@@ -12,8 +12,8 @@
           <hr class="lite"/>
           <h2 class="my-intro-title">标签</h2>
           <br/>
-          <div class="my-tag-group">
-            <at-tag v-for="introTag in introTagList" color="#78A4FA" >{{introTag}}</at-tag>
+          <div class="my-tag-group" >
+            <at-tag v-for="introTag in introTagList" color="#78A4FA" style="font-size: 14px">{{introTag}}</at-tag>
           </div>
           <br/><br/>
           <hr class="lite"/>

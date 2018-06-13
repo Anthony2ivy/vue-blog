@@ -1,18 +1,31 @@
 <template>
   <div>
-    <div class="full-back-img" :style="{backgroundImage : 'url('+backImgUrl+')'}">
+    <div class="my-fullback-img" :style="{backgroundImage : 'url('+backImgUrl+')'}">
     </div>
     <h1 class="my-center-title">{{pageName}}</h1>
     <h2 class="my-center-second-title" style="margin-top: 20px;">{{pageIntro}}</h2>
     <div class="container my-blog-container" style="padding:30px 10% 0 10%;margin-top: 50px;">
       <div class="my-timeline">
+        <div class="my-timeline-item year">2018</div>
         <div class="my-timeline-item" v-for="item in testItems">
           <div class="my-timeline-item__time">{{item.time}}</div>
-          <div class="my-timeline-item__block">
-            {{item.title}}
-            <div class="pull-right">
-              <at-tag>Webpack</at-tag>
-              <at-tag>Webpack</at-tag>
+          <div class="my-timeline-item__block clearfix">
+            <div class="my-timeline-item__title">{{item.title}}</div>
+            <div class="my-tag-group pull-right">
+              <at-tag color="#78A4FA" style="font-size: 13px">Webpack</at-tag>
+              <at-tag color="#78A4FA" style="font-size: 13px">Webpack</at-tag>
+            </div>
+          </div>
+        </div>
+        <div class="my-timeline-item year">2017</div>
+        <div class="my-timeline-item" v-for="item in testItems">
+          <div class="my-timeline-item__time">{{item.time}}</div>
+          <div class="my-timeline-item__block clearfix">
+            <div class="my-timeline-item__title">{{item.title}}</div>
+            <div class="my-tag-group pull-right">
+              <at-tag color="#78A4FA">Webpack</at-tag>
+              <at-tag color="#78A4FA">Webpack</at-tag>
+              <at-tag color="#78A4FA">Webpack</at-tag><at-tag color="#78A4FA">Webpack</at-tag><at-tag color="#78A4FA">Webpack</at-tag>
             </div>
           </div>
         </div>
