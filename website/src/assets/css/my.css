@@ -257,6 +257,9 @@ hr.lite {
       transition: all 0.2s;
       & .my-timeline-item__title{
         cursor: pointer;
+        &:hover{
+          color:black;
+        }
       }
     }
     &:hover,&.hover {
