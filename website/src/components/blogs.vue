@@ -31,10 +31,12 @@
         </div>
       </div>
     </div>
+    <editormd></editormd>
   </div>
 </template>
 
 <script>
+  import editormd from './editormd'
   export default {
     name: "blogs",
     data: function () {
@@ -61,6 +63,9 @@
           this.className=this.className.replace(/hover/g,'');
         };
       }
+    },
+    components:{
+      editormd:editormd
     }
   }
 </script>
