@@ -1,49 +1,42 @@
 <template>
   <div class="login-container">
     <div class="login-panel">
-      <div class="login-title markdown-block">用户登录</div>
-      <br/>
-      <at-input v-model="username" size="large" placeholder="用户名"></at-input>
-      <br/>
-      <at-input v-model="password" size="large" type="password" placeholder="密码"></at-input>
-      <br/>
-      <at-alert message="用户名密码错误" type="error"  v-show="isPasswordWrong" style="margin-bottom: 20px" ></at-alert>
-      <at-button type="primary" class="pull-right" size="large" @click="login()">登录</at-button>
+      <div class="login-title markdown-block" style="margin-bottom: 30px;">用户登录</div>
+      <Input v-model="username" size="large" placeholder="用户名"></Input>
+      <Input v-model="password" size="large" type="password" placeholder="密码"></Input>
+      <Alert type="error" show-icon v-show="isPasswordWrong" style="margin-bottom: 20px">用户名密码错误</Alert>
+      <Button type="success" class="pull-right" long @click="login()">登录</Button>
       <br/>
     </div>
   </div>
 </template>
 
 <script>
-  import axios from 'axios'
-  import config from '../config'
+  import axios from 'axios';
+  import config from '../config';
+  import blogService from '../services/blogService';
 
   export default {
-    name: "Login",
-    data: function () {
+    name: 'Login',
+    data: function() {
       return {
         username: '',
         password: '',
-        isPasswordWrong:false
+        isPasswordWrong: false,
       };
     },
     methods: {
       login() {
-        let self = this;
-        axios.post(config.backEndUrl + '/rest/login', {
-          username: self.username,
-          password: self.password
-        }).then(() => {
-          self.$root.isLogin=true;
-          self.isPasswordWrong=false;
+        blogService.login(this.username, this.password).then(() => {
+          this.$root.isLogin = true;
+          this.isPasswordWrong = false;
         }).catch(e => {
-          self.isPasswordWrong=true;
+          this.isPasswordWrong = true;
         });
-      }
+      },
     },
-    mounted:{
-    }
-  }
+    mounted: {},
+  };
 </script>
 
 <style scoped>
@@ -78,5 +71,10 @@
     background-color: white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     padding: 50px;
+    padding-bottom: 80px;
+  }
+
+  .login-panel * {
+    margin-bottom: 20px;
   }
 </style>
