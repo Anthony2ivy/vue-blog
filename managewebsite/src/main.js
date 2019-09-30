@@ -24,7 +24,7 @@ new Vue({
   },
   components: { App },
   template: '<App/>',
-    render: h => h(App),
+  render: h => h(App),
   watch: {
     'isLogin': function(newVal) {
       debugger;
