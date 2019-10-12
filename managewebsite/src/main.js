@@ -17,7 +17,26 @@ Vue.config.productionTip = false;
 new Vue({
   el: '#app',
   router,
+  data: function(){
+    return {
+      isLogin:false
+    }
+  },
   components: { App },
   template: '<App/>',
-    render: h => h(App)
+  render: h => h(App),
+  watch: {
+    'isLogin': function(newVal) {
+      debugger;
+      if (newVal) {
+        if(this.$route.path == '/login'){
+          this.$router.push('/main/home');
+        }
+      } else {
+        if (this.$route.path != '/login') {
+          this.$router.push( '/login');
+        }
+      }
+    },
+  },
 });
