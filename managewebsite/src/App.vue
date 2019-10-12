@@ -1,37 +1,52 @@
 <template>
   <div>
-    <router-view></router-view>
+    <Menu class="left-menu" :theme="mainTheme" :active-name="activeItem">
+      <div class="center-icon" style="padding-top: 10px">
+        <div  class="my-double-circle-icon" style="margin-top: 10px;padding-top: 5px; background-image: url('static/imgs/icon.jpg'); width: 100px; height: 100px;"></div>
+      </div>
+      <div class="center-title">MY BLOG</div>
+        <MenuItem name="home" to="home">
+          <Icon type="md-home" />
+          首页
+        </MenuItem>
+      <MenuItem name="newBlog" to="newBlog">
+        <Icon type="md-send" />
+        发布新博客
+      </MenuItem>
+        <MenuItem name="blogList" to="blogs">
+          <Icon type="md-list" />
+          博客管理
+        </MenuItem>
+        <MenuItem name="tag">
+          <Icon type="md-pricetag" />
+          标签管理
+        </MenuItem>
+        <MenuItem name="setting">
+          <Icon type="md-settings" />
+          设置
+        </MenuItem>
+    </Menu>
+    <router-view class="right-container"> </router-view>
   </div>
 </template>
 
 
 <script>
-  import blogService from './services/blogService';
-
   export default {
     name: 'App',
-    data: function() {
+    data: function () {
+      console.log(this.$route);
       return {
         navItems: [],
         isTop: true,
         mainTheme: 'dark',
-        activeItem: this.$route.name,
-        isLogin: false,
-      };
+        activeItem: this.$route.name
+      }
     },
     methods: {},
-    mounted: function() {
-      let self = this;
-      blogService.checkLogin().then(() => {
-        self.$root.isLogin = true;
-      }).catch(e => {
-        debugger;
-        self.$root.isLogin = false;
-        if (this.$route.path != '/login') {
-          this.$router.push( '/login');
-        }
-      });
-      window.onscroll = function() {
+    mounted: function () {
+      var self=this;
+      window.onscroll = function () {
         const scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
         if (scrollTop > 0) {
           if (self.isTop)
@@ -40,22 +55,20 @@
           if (!self.isTop)
             self.isTop = true;
         }
-      };
-    },
-  };
+      }
+    }
+  }
 </script>
 
 <style>
-  body {
+  body{
     font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
   }
-
-  .left-menu {
-    min-height: 100vh;
-    position: fixed;
-  }
-
-  .center-title {
+.left-menu{
+  min-height: 100vh;
+  position: fixed;
+}
+  .center-title{
     font-weight: 500;
     color: white;
     text-align: center;
@@ -63,8 +76,7 @@
     font-size: 25px;
     margin-bottom: 20px;
   }
-
-  .right-container {
+  .right-container{
     padding-left: 250px;
     padding-top: 10px;
     padding-right: 10px;
