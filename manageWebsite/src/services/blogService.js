@@ -27,4 +27,14 @@ blogService.login = function(userName, password) {
   });
 };
 
+blogService.logout = function() {
+  return new Promise((resolve, reject) => {
+    this.axios.get('/rest/logout').then(() => {
+      resolve();
+    }).catch(e => {
+      reject(e);
+    });
+  });
+};
+
 export default blogService;

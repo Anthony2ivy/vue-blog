@@ -61,6 +61,7 @@
     background-position: center;
     background-repeat: no-repeat;
     overflow: auto;
+    padding-left: 0;
   }
 
   .login-panel {

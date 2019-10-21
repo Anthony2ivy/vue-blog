@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import homePage from '../pages/homePage'
 import newBlogPage from '../pages/newBlogPage'
 import blogsPage from '../pages/blogsPage'
+import loginPage from '../pages/loginPage'
 Vue.use(Router);
 
 export default new Router({
@@ -26,6 +27,11 @@ export default new Router({
       path: '/blogs',
       name: 'blogs',
       component: blogsPage
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: loginPage
     },
   ]
 })
