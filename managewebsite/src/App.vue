@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Menu class="left-menu" :theme="mainTheme" :active-name="activeItem" v-if="this.$route.name !='login'" @on-select="selectMenu" >
+    <Menu class="left-menu" :theme="mainTheme" :active-name="activeItem">
       <div class="center-icon" style="padding-top: 10px">
         <div  class="my-double-circle-icon" style="margin-top: 10px;padding-top: 5px; background-image: url('static/imgs/icon.jpg'); width: 100px; height: 100px;"></div>
       </div>
@@ -25,10 +25,6 @@
           <Icon type="md-settings" />
           设置
         </MenuItem>
-      <MenuItem name="logout">
-        <Icon type="md-log-out" />
-        退出
-      </MenuItem>
     </Menu>
     <router-view class="right-container"> </router-view>
   </div>
@@ -36,7 +32,6 @@
 
 
 <script>
-  import blogService from './services/blogService'
   export default {
     name: 'App',
     data: function () {
@@ -48,15 +43,7 @@
         activeItem: this.$route.name
       }
     },
-    methods: {
-      selectMenu(name){
-        if(name=='logout'){
-          blogService.logout().finally(()=>{
-            this.$root.isLogin=false;
-          });
-        }
-      }
-    },
+    methods: {},
     mounted: function () {
       var self=this;
       window.onscroll = function () {
