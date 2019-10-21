@@ -30,12 +30,15 @@
         script.src = url;
         document.getElementsByTagName("head")[0].appendChild(script);
       }
-      loadScript('static/lib/editormd/editormd.min.js',function () {
-        var editor = editormd("editormd", {
-          path: "static/lib/editormd/lib/",
-          width:'90%',
-          height:'560px'
-        });
+      $.getScript('static/lib/editormd/editormd.min.js',function () {
+          var editor = editormd("editormd", {
+              path: "static/lib/editormd/lib/",
+              width:'90%',
+              height:'560px',
+              imageUpload    : true,
+              imageFormats   : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+              imageUploadURL : "http://localhost:3000/rest/static/img"
+          });
       });
     },
 

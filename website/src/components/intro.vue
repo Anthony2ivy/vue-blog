@@ -7,7 +7,7 @@
     <h2 class="my-center-second-title" style="margin-top: 20px;">{{blogIntro}}</h2>
     <div class="my-double-circle-icon" :style="{marginTop : '0px',backgroundImage : 'url('+introIconImgUrl+')'}"></div>
     <div class="container" style="margin-top: 10px;">
-      <div class="row at-row flex-center">
+      <div class="Row flex-center">
         <div class="col-md-6 my-col-container">
           <hr class="lite"/>
           <h2 class="my-intro-title">标签</h2>
